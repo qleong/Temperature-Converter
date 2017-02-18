@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * {@inheritDoc}
-     *
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Function to attach UI elements to member variables.
-     *
      */
     private void setupUIElements() {
         mInputEditText = (EditText) findViewById(R.id.editText1);
@@ -51,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Attaches input <code>EditView</code> listeners.
-     *
      */
     private void attachEditViewInputListeners() {
         mInputEditText.addTextChangedListener(new TextWatcher() {
@@ -67,7 +64,6 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Attaches behavior of <code>ToggleButton</code>.
-     *
      */
     private void attachToggleButtonlisteners() {
         // Set toggle button label values when on/off.
@@ -84,7 +80,6 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Updates the output display with the conversion of the input.
-     *
      */
     private void updateOutputDisplay() {
         final String inputText = mInputEditText.getText().toString();
@@ -126,10 +121,10 @@ public class MainActivity extends AppCompatActivity {
      *
      */
     private String formatOutput(final Double outputTemp) {
-        // Turn into ternary based on toggle.
         return String.format(
             "%.1f degrees ".concat(mToggleButton.isChecked() ? FAHRENHEIT : CELSIUS),
             outputTemp);
     }
 
 }
+
